@@ -1,0 +1,139 @@
+/*       GLOBAL CSS RESETS       */
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+/*       GRID SETUP + POSITIONING       */
+#page>header {
+    grid-area: header;
+    background-color: #F7D7D7;
+    border-bottom: 3px dotted;
+}
+
+#page>nav {
+    grid-area: nav;
+    /* background-color: #F7D7D7; */
+}
+
+#page>main {
+    grid-area: main;
+    /* background-color: #F7D7D7; */
+}
+
+#page>aside {
+    grid-area: sidebar;
+    /* background-color: #F7D7D7; */
+}
+
+#page>footer {
+    grid-area: footer;
+    /* background-color: #F7D7D7; */
+}
+
+#page {
+    display: grid;
+    gap: 20px;
+    width: 100%;
+    max-height: 100vh;
+  
+    grid-template-areas: 
+        "header   header  header"
+        "nav   main    sidebar"
+        "footer   footer  footer";
+
+    grid-template-rows: .5fr 5fr .3fr;
+    grid-template-columns: 1fr 4fr .5fr;
+}
+
+
+
+/*       HEADER --> STYLING       */
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*       NAV --> STYLING       */
+nav {
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+/*       MAIN --> STYLING       */
+main {
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+}
+
+/*       RESPONSIVE GALLERY STYLING
+    https://blog.logrocket.com/how-create-responsive-image-gallery-css-flexbox/ 
+
+    -- insanely useful RSS for creating a responsive gallery grid, need to make sure the page height remains the full viewport height and troubleshoot some issues with the rest of my code --
+
+*/
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+  
+.gallery > li {
+    height: 300px;
+    cursor: pointer;
+    position: relative;
+    flex-grow: 1;
+    flex: auto;
+}
+
+.gallery li img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+
+.gallery::after {
+    content: "";
+    flex-grow: 999;
+}
+
+
+/*       SIDEBAR --> STYLING       */
+aside {
+    justify-content: space-around;
+    align-items: left;
+}
+
+
+/*       FOOTER --> STYLING       */
+footer {
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: #F7D7D7;
+}
