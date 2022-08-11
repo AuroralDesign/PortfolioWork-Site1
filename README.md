@@ -1,2 +1,4 @@
 # PortfolioWork-Site1
-WIP website for my portfolio - content courtesy of my "client" @Artist_Evie on instagram
+WIP website for my portfolio 
+Content courtesy of GDBeeArt on instagram // https://www.instagram.com/gdbee/?hl=en
+
